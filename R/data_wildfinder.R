@@ -28,7 +28,7 @@ data_mammals <- function(){
 #' @return data.frame with info on which mammals in ecoregions
 #' @export
 #'
-data_mammals <- function(){
+data_mammals_ecoregion <- function(){
 
   readr::read_csv(here::here("data", "wwf-wildfinder", "wildfinder-ecoregions_species.csv"))
 
