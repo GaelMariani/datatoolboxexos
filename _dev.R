@@ -1,5 +1,5 @@
 devtools::load_all()
-
+usethis::use_pipe()
 
 ### Drake ###
 
