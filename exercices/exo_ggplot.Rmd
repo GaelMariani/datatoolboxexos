@@ -1,0 +1,60 @@
+---
+title: "exo_ggplot"
+author: "Gael Mariani"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction 
+
+blablabla
+
+# Données
+
+blablabla
+
+# Analyses
+
+## Loading data
+
+```{r message = FALSE}
+devtools::load_all()
+pantheria <- datatoolboxexos::pantheria()
+```
+
+## Tidy the dataset
+
+```{r warning = FALSE, message = FALSE}
+library(tidyverse)
+tidy_pantheria <- datatoolboxexos::tidy_pantheria(pantheria)
+
+tidy_pantheria
+```
+
+## Data exploration 
+
+What is the mean home range by family? Standard deviation? The sample size?
+
+```{r}
+explo_pantheria <- datatoolboxexos::explo_data(tidy_pantheria)
+
+```
+
+## Data visualisation
+
+Bar chart of the number of entries per family
+
+```{r}
+datatoolboxexos::Graph1(tidy_pantheria)
+```
+
+Scatter plot of litter size as a function of longevity
+
+```{r message = FALSE}
+datatoolboxexos::Graph2(tidy_pantheria)
+```
+

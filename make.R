@@ -1,6 +1,6 @@
 ##################################################
 #
-#Data and Code fir the CESAB Datatoolbox Exercices
+#Data and Code for the CESAB Datatoolbox Exercices
 #
 ##################################################
 
@@ -12,10 +12,14 @@ rm(list = ls())
 devtools::install_deps()
 
 # ----- install compendium package (rend dispo les fonctions du compendium dispo)
-devtools::install(build = FALSE)
+#devtools::install(build = FALSE) #dispo dans tout l'ordi
+devtools::load_all() #dispo juste pour le projet
 
 # ----- Knit exo dplyr
 rmarkdown::render(here::here("exercices","exo_dplyr.Rmd"))
+
+# ----- Knit exo ggplot
+rmarkdown::render(here::here("exercices","exo_ggplot.Rmd"))
 
 # ----- Knit exo spatial
 rmarkdown::render(here::here("exercices","exo_spatial.Rmd"))
