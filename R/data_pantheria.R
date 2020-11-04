@@ -28,8 +28,8 @@ tidy_pantheria <- function(pantheria){
                   homerange      = `22-2_HomeRange_Indiv_km2`,
                   litter_size    = `16-1_LittersPerYear`,
                   longevity      = `17-1_MaxLongevity_m`) %>%
-    select(order, family, adult_bodymass, dispersal_age, gestation, homerange, litter_size, longevity) %>% # select the wanted column
-    na_if(-999) # remove NA
+    dplyr::select(order, family, adult_bodymass, dispersal_age, gestation, homerange, litter_size, longevity) %>% # select the wanted column
+    dplyr::na_if(-999) # remove NA
 }
 
 #' Explore the data

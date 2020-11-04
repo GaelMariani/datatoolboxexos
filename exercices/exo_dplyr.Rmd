@@ -47,11 +47,9 @@ Dans combien de royaumes, biomes et écorégions différents retrouve-t-on chacu
 ```{r message=FALSE, warning=FALSE}
 library(tidyverse)
 
-Ursidae <- sp %>%
-  dplyr::filter(family == "Ursidae", sci_name != "Ursus malayanus") %>%
-  dplyr::select(species_id, sci_name, common) %>%
-  dplyr::left_join(., ecoreg_sp, by = "species_id") %>% # first join with ecoreg_sp data
-  dplyr::left_join(., ecoreg, by = "ecoregion_id")  # second join with ecoreg data
+
+Ursidae <- datatoolboxexos::extract_ursidae(sp) 
+
 
 # for realms  
 realm_ursidae <- Ursidae %>%

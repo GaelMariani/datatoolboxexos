@@ -18,4 +18,9 @@ Imports:
     readr,
     magrittr,
     dplyr,
-    knitr
+    knitr,
+    ggplot2,
+    forcats,
+    fishualize,
+    sf,
+    drake
